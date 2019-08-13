@@ -1,0 +1,15 @@
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay.open {
+    display: block;
+  }
+}

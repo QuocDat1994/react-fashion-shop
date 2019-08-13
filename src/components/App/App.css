@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+:root {
+  --text-color: rgb(74, 74, 74);
+  --primary-color: rgb(47, 206, 152);
+
+  --tablet-width: 768px;
+  --mobile-width: 480px;
+}
+
+html {
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,54 @@
+.button {
+  position: relative;
+  border: 0;
+  background: transparent;
+  margin: 0 1rem;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.button .icon {
+  font-size: 1.7rem;
+}
+
+.button span {
+  font-size: 1.3rem;
+  font-family: "roboto", sans-serif;
+  color: var(--text-color);
+  padding: 0 0.5rem;
+  display: none;
+}
+
+.button .notification {
+  position: absolute;
+  top: 0rem;
+  right: -0.5rem;
+  background: var(--primary-color);
+  border-radius: 100%;
+  padding: 0.3rem;
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    width: 100%;
+    margin: 2rem;
+    align-self: center;
+  }
+
+  .button span {
+    display: block;
+  }
+
+  .button .notification {
+    position: relative;
+  }
+}
