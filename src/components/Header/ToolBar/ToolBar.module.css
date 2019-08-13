@@ -1,0 +1,27 @@
+.toolbar {
+  display: flex;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .toolbar {
+    position: absolute;
+    top: 0;
+    width: 40vw;
+    height: 100vh;
+    transform: translateX(-1000px);
+    transition: all 0.5s ease-in-out;
+    flex-direction: column;
+    background: #f8f8f8;
+  }
+
+  .toolbar.open {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toolbar {
+    width: 60vw;
+  }
+}
