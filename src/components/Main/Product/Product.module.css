@@ -1,0 +1,39 @@
+.container {
+  /* background: green; */
+}
+
+.container img {
+  width: 100%;
+  display: block;
+}
+
+.container .info {
+  display: grid;
+  grid-template: auto auto / 1.3fr 0.7fr;
+  border: 1px solid var(--border-color);
+}
+
+.info .left {
+  text-align: left;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.info .left > div:last-child {
+  margin-top: 0.3rem;
+}
+
+.info .right {
+  text-align: right;
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info .right > div:last-child {
+  margin: 0.5rem 0;
+}
+
+.info .bottom {
+  grid-column: 1 / span 2;
+}

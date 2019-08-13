@@ -1,0 +1,7 @@
+.rating {
+  font-size: 0.8rem;
+}
+
+.rating > * {
+  padding-left: 0.1rem;
+}

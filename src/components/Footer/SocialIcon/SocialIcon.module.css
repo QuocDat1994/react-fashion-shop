@@ -1,0 +1,21 @@
+.socialIcon {
+  position: relative;
+  display: inline-flex;
+  border: 2px solid var(--text-color);
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 0.8;
+  margin: 1rem 1rem 0 0;
+}
+
+.socialIcon:hover {
+  top: -0.5rem;
+}
+
+.socialIcon a {
+  color: var(--text-color);
+}
