@@ -1,0 +1,11 @@
+.name {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.name:hover {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
