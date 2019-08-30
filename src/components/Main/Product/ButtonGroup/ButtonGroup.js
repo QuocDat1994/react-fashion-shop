@@ -6,7 +6,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const ButtonGroup = props => (
-  <div className={styles.group}>
+  <div className={`${styles.group} ${props.isLarge ? styles.large : ""}`}>
     <div className={styles.button}>
       <FontAwesomeIcon icon={faHeart} />
     </div>

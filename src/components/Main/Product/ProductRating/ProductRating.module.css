@@ -5,3 +5,8 @@
 .rating > * {
   padding-left: 0.1rem;
 }
+
+.rating.large {
+  font-size: 1rem;
+  margin: 2rem 0;
+}

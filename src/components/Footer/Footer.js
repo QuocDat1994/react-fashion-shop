@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.info}>
         <section className={styles.about}>
-          <h1>About this</h1>
+          <h1>About</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
       <div className={styles.copyright}>
         <p>
-          Copyright ©2019 | Original template is designed by Colorlib |
+          Copyright ©2019 | Original template by Colorlib |
           Recreated by me : )
         </p>
       </div>

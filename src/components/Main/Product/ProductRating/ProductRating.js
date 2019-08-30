@@ -22,7 +22,15 @@ const ProductRating = props => {
     }
   }
 
-  return <div className={styles.rating}>{stars.map(star => star)}</div>;
+  return (
+    <div
+      className={`${styles.rating} ${
+        props.style == "large" ? styles.large : ""
+      }`}
+    >
+      {stars.map(star => star)}
+    </div>
+  );
 };
 
 export default ProductRating;

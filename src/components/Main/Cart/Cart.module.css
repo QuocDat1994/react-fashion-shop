@@ -1,0 +1,218 @@
+.cart .container {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.cart .heading {
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--category-bg-color);
+}
+
+.cart .heading h1 {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+  opacity: 0.6;
+}
+
+.cart .heading h2 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.cart table {
+  width: 100%;
+  text-align: center;
+  color: var(--text-color);
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.cart table tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cart table th {
+  font-size: 1.2rem;
+  font-weight: normal;
+  padding: 2rem;
+}
+
+.cart table td {
+  padding: 2rem;
+}
+
+.cart table td:last-of-type {
+  font-weight: bold;
+}
+
+.cart table td.product {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.cart table td.product img {
+  margin-right: 1rem;
+}
+
+.cart table td.product a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cart table td.product a:hover {
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.cart .table {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.cart .button_group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart button {
+  color: white;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 3px;
+}
+
+.cart button:hover {
+  background: var(--text-color);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.gray_btn {
+  background: var(--text-color);
+  margin-right: 1rem;
+  opacity: 0.5;
+}
+
+.green_btn {
+  background: var(--primary-color);
+}
+
+.cart .payment {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color);
+  margin-top: 3rem;
+}
+
+.cart .payment h1 {
+  font-size: 1.5rem;
+  margin-top: 0rem;
+}
+
+.cart .payment .shipping {
+  margin-top: 2rem;
+}
+
+.cart .payment .coupon_ship,
+.cart .payment .checkout {
+  width: 47%;
+  background: var(--toolbar-bg-color);
+  padding: 3rem 5rem;
+  box-sizing: border-box;
+}
+
+.coupon input {
+  outline: none;
+  border: none;
+  height: 2.5rem;
+  width: 70%;
+}
+
+.shipping ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shipping ul li {
+  display: flex;
+  align-items: center;
+}
+
+.shipping ul li label {
+  margin-left: 0.5rem;
+}
+
+.shipping ul li p {
+  margin: 0.5rem 0;
+  margin-left: auto;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkout button {
+  width: 100%;
+}
+
+.fee section {
+  display: flex;
+  margin: auto;
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+.fee section:last-of-type {
+  background: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.fee section p {
+  margin: 0.5rem 0;
+}
+
+.fee section p:last-of-type {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .cart .payment {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart .payment .coupon_ship,
+  .cart .payment .checkout {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cart .table {
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .cart .container {
+    width: 90%;
+  }
+}
