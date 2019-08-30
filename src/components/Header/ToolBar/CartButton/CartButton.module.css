@@ -1,15 +1,21 @@
+.link {
+  display: flex;
+  text-decoration: none;
+}
+
 .button {
   position: relative;
   border: 0;
   background: transparent;
-  margin: 0 1rem;
+  margin: 0 2rem;
   outline: none;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
-.button:hover {
+.button:hover,
+.link:hover {
   color: var(--primary-color);
   transition: all 0.2s ease-in-out;
 }
@@ -40,7 +46,7 @@
 @media screen and (max-width: 768px) {
   .button {
     width: 100%;
-    margin: 2rem;
+    margin: 0;
     align-self: center;
   }
 

@@ -10,3 +10,13 @@
   color: var(--primary-color);
   transition: all 0.2s ease-in-out;
 }
+
+.category.large > * {
+  font-size: 1.2rem;
+}
+
+.category.large {
+  margin: 1rem 0;
+}
+
+

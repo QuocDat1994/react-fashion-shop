@@ -1,0 +1,21 @@
+.container {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.container img {
+  width: 100%;
+  display: block;
+}
+
+.container .detail {
+  margin-left: 2rem;
+  position: relative;
+}
+
+.container .info {
+  margin: 2rem 0;
+}

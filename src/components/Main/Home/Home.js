@@ -10,7 +10,7 @@ const Home = props => (
     {/* <Carousel /> */}
     <div className={styles.container}>
       <h1 className={styles.heading}>Popular on Fashion Shop</h1>
-      {/* <ProductList /> */}
+      <ProductList />
     </div>
   </div>
 );
