@@ -1,17 +1,23 @@
 import React from "react";
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
-import "./App.less";
+
 import { AppContent } from "./containers/AppContent/AppContent";
 import { AppFooter } from "./containers/AppFooter/AppFooter";
 import { AppHeader } from "./containers/AppHeader/AppHeader";
+import "./App.less";
 
 function App() {
   return (
-    <div className="App">
-      <AppHeader/>
-      <AppContent/>
-      <AppFooter/>
-    </div>
+    <Router>
+      <div className="App">
+        <AppHeader/>
+        <AppContent/>
+        <AppFooter/>
+      </div>
+    </Router>
   );
 }
 

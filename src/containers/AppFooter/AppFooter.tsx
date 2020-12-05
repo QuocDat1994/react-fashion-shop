@@ -7,8 +7,8 @@ export const AppFooter = () => {
   const { Footer } = Layout;
 
   return (
-    <div>
-      dsadsa
-    </div>
+    <Footer>
+      My Footer
+    </Footer>
   )
 }
