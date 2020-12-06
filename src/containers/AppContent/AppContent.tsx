@@ -1,20 +1,19 @@
-import React from 'react'
-import {Switch,Route} from "react-router-dom";
-import { Layout } from 'antd';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Layout } from "antd";
 
-import { Home } from '../Home/Home';
-import { Cart } from '../Cart/Cart';
-import { Category } from '../Category/Category';
-import { Product } from '../Product/Product';
+import { Home } from "../Home/Home";
+import { Cart } from "../Cart/Cart";
+import { Category } from "../Category/Category";
+import { Product } from "../Product/Product";
 
 import "./AppContent.less";
 
 export const AppContent = () => {
-  const { Content} = Layout;
+  const { Content } = Layout;
 
   return (
-    <Content>
-      My Content
+    <Content className="app-content">
       <Switch>
         <Route exact path="/">
           <Home />
@@ -30,5 +29,5 @@ export const AppContent = () => {
         </Route>
       </Switch>
     </Content>
-  )
-}
+  );
+};
