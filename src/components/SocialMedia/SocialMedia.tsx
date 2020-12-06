@@ -10,9 +10,11 @@ import {
 
 import "./SocialMedia.less";
 
-export const SocialMedia = () => {
+export const SocialMedia = (props: any) => {
+  const { className = "" } = props;
+
   return (
-    <Row align="middle" className="social-media">
+    <Row align="middle" className={`social-media ${className}`}>
       <Space size="middle">
         <Button
           className="social-media__btn"
