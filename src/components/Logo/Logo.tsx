@@ -4,9 +4,11 @@ import { ShoppingOutlined } from "@ant-design/icons";
 
 import "./Logo.less";
 
-export const Logo = () => {
+export const Logo = (props: any) => {
+  const { className = "" } = props;
+
   return (
-    <div className="logo">
+    <div className={`logo ${className}`}>
       <Row align="middle">
         <ShoppingOutlined className="logo__icon" />
         <div className="logo__text">Fashion Shop</div>
