@@ -2,8 +2,14 @@ import React from "react";
 import { Drawer } from "antd";
 
 import "./HeaderDrawer.less";
+import { IBasicProps } from "../../interfaces";
 
-export const HeaderDrawer = (props: any) => {
+interface IProps extends IBasicProps {
+  visible: boolean;
+  onClose: () => void;
+}
+
+export const HeaderDrawer = (props: IProps) => {
   const { children, onClose, visible } = props;
 
   return (

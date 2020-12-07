@@ -3,8 +3,14 @@ import { Button, Row } from "antd";
 import { PhoneOutlined } from "@ant-design/icons";
 
 import "./HeaderContact.less";
+import { IBasicProps } from "../../interfaces";
+import { RowProps } from "antd/lib/row";
 
-export const HeaderContact = (props: any) => {
+interface IProps extends IBasicProps {
+  justify?: RowProps["justify"];
+}
+
+export const HeaderContact = (props: IProps) => {
   const { justify = "start" } = props;
 
   return (

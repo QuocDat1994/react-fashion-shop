@@ -8,9 +8,13 @@ import {
   InstagramFilled,
 } from "@ant-design/icons";
 
+import { IBasicProps } from "../../interfaces";
+
 import "./SocialMedia.less";
 
-export const SocialMedia = (props: any) => {
+interface IProps extends IBasicProps {}
+
+export const SocialMedia = (props: IProps) => {
   const { className = "" } = props;
 
   return (
