@@ -2,9 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
 
+import { IBasicProps } from "../../interfaces";
+
 import "./HeaderMenu.less";
 
-export const HeaderMenu = (props: any) => {
+interface IProps extends IBasicProps {
+  mode?: "vertical" | "horizontal" | "inline";
+}
+
+export const HeaderMenu = (props: IProps) => {
   const { mode = "horizontal" } = props;
 
   return (

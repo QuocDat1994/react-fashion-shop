@@ -2,9 +2,13 @@ import React from "react";
 import { Row } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons";
 
+import { IBasicProps } from "../../interfaces";
+
 import "./Logo.less";
 
-export const Logo = (props: any) => {
+interface IProps extends IBasicProps {}
+
+export const Logo = (props: IProps) => {
   const { className = "" } = props;
 
   return (
