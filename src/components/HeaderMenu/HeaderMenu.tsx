@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
 
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 
 import "./HeaderMenu.less";
 

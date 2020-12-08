@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Input, Layout, Menu, Row, Space } from "antd";
+import { Button, Col, Input, Layout, Row, Space } from "antd";
 
 import { Logo } from "../../components/Logo/Logo";
 import { SocialMedia } from "../../components/SocialMedia/SocialMedia";

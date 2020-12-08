@@ -2,7 +2,7 @@ import React from "react";
 import { Drawer } from "antd";
 
 import "./HeaderDrawer.less";
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 
 interface IProps extends IBasicProps {
   visible: boolean;

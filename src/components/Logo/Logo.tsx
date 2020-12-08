@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "antd";
 import { ShoppingOutlined } from "@ant-design/icons";
 
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 
 import "./Logo.less";
 

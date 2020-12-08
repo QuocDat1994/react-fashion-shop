@@ -3,7 +3,7 @@ import { Button, Row } from "antd";
 import { PhoneOutlined } from "@ant-design/icons";
 
 import "./HeaderContact.less";
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 import { RowProps } from "antd/lib/row";
 
 interface IProps extends IBasicProps {

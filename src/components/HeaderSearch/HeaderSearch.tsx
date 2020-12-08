@@ -2,7 +2,7 @@ import React from "react";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 
 import "./HeaderSearch.less";
 
