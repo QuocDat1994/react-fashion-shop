@@ -8,7 +8,7 @@ import {
   InstagramFilled,
 } from "@ant-design/icons";
 
-import { IBasicProps } from "../../interfaces";
+import { IBasicProps } from "../../interfaces/IBasicProps";
 
 import "./SocialMedia.less";
 

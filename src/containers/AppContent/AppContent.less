@@ -1,5 +1,18 @@
 @import "../../styles/main.less";
 .app-content {
-  background: yellowgreen;
-  height: 100vh;
+  .flex-center();
+  min-width: 320px;
+
+  & > div {
+    max-width: 1180px;
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 575px) {
+  .app-content {
+    & > div {
+      padding: 24px 50px;
+    }
+  }
 }
