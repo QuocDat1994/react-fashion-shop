@@ -1,5 +1,6 @@
-import { Row } from "antd";
 import React from "react";
+import { Container } from "../../components/Container/Container";
+import { HomeCollections } from "../../components/HomeCollections/HomeCollections";
 import { HomeFeatures } from "../../components/HomeFeatures/HomeFeatures";
 import { ProductList } from "../../components/ProductList/ProductList";
 
@@ -7,13 +8,16 @@ import "./Home.less";
 
 export const Home = () => {
   return (
-    <div>
-      <Row>
+    <section className="home">
+      <Container>
         <ProductList />
-      </Row>
-      <Row justify="center">
+      </Container>
+      <Container fluid>
+        <HomeCollections />
+      </Container>
+      <Container>
         <HomeFeatures />
-      </Row>
-    </div>
+      </Container>
+    </section>
   );
 };
