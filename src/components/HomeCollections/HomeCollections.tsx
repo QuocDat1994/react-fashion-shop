@@ -3,6 +3,7 @@ import { Col, Row, Button } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 
 import "./HomeCollections.less";
+import { BlurBackground } from "../BlurBackground/BlurBackground";
 
 export const HomeCollections = () => {
   const CollectionCard = (props: { image: string; title: string }) => {
@@ -10,8 +11,7 @@ export const HomeCollections = () => {
 
     return (
       <div className="home-collections__card">
-        <img className="card__background" src={image} alt="" />
-        <div className="card__overlay"></div>
+        <BlurBackground image={image} />
         <Row className="card__details" align="middle" justify="end">
           <Col span={14}>
             <img className="card_image" src={image} alt="" />
