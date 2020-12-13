@@ -51,6 +51,36 @@
       width: 100%;
       height: auto;
     }
+
+    .product-card {
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 0;
+
+      .ant-card-meta-title,
+      .product-price,
+      .ant-card-meta-description,
+      .product-rating {
+        color: white !important;
+      }
+
+      .product-rating {
+        .ant-rate-star-half .ant-rate-star-second {
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      .ant-card-actions {
+        background-color: transparent;
+
+        li:hover {
+          background-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .product-btn {
+          color: white !important;
+        }
+      }
+    }
   }
 }
 
