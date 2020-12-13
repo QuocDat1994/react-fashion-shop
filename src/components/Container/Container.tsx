@@ -8,10 +8,12 @@ interface IProps extends IBasicProps {
 }
 
 export const Container = (props: IProps) => {
-  const { children, fluid } = props;
+  const { className = "", children, fluid } = props;
 
   return (
-    <div className={`container ${fluid ? "container--fluid" : ""}`}>
+    <div
+      className={`container ${className} ${fluid ? "container--fluid" : ""}`}
+    >
       {children}
     </div>
   );

@@ -50,7 +50,6 @@ export const HomeCarousel = () => {
           icon={<RightOutlined />}
           onClick={nextItem}
         />
-
         <BlurBackground image={product.image} />
         <Row justify="center">
           <Col span={24}>
