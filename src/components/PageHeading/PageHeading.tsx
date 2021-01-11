@@ -24,7 +24,7 @@ export const PageHeading = (props: IProps) => {
       <Title className="page-heading__title">{title}</Title>
       <Breadcrumb className="page-heading__breadcrumb">
         {menu.map((item) => (
-          <Breadcrumb.Item>{item}</Breadcrumb.Item>
+          <Breadcrumb.Item key={item}>{item}</Breadcrumb.Item>
         ))}
       </Breadcrumb>
     </div>

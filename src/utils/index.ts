@@ -17,3 +17,10 @@ export const getTotalBill = (values: string[]) => {
     0
   );
 };
+
+export const getClassName = (baseClass: string, modifier: string) => {
+  if (modifier !== "") {
+    return `${baseClass}--${modifier}`;
+  }
+  return "";
+};

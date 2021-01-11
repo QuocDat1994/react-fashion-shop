@@ -1,15 +1,4 @@
-import {
-  Avatar,
-  Button,
-  Card,
-  Col,
-  Input,
-  InputNumber,
-  Radio,
-  Row,
-  Space,
-  Table,
-} from "antd";
+import { Card, Col, InputNumber, Row, Space, Table } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import { AppButton } from "../../components/AppButton/AppButton";
@@ -65,7 +54,10 @@ export const Cart = () => {
                 <Card bordered={false} className="cart-product__card">
                   <Meta
                     avatar={
-                      <img src="https://preview.colorlib.com/theme/littlecloset/images/cart_item_1.jpg" />
+                      <img
+                        src="https://preview.colorlib.com/theme/littlecloset/images/cart_item_1.jpg"
+                        alt=""
+                      />
                     }
                     title={product}
                     description="This is the description"

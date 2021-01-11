@@ -1,22 +1,6 @@
 @import "../../styles/main.less";
 
 .feature-card {
-  overflow: hidden;
-
-  &.feature-card--primary {
-    .ant-card-body {
-      background-color: @primary-color;
-    }
-
-    .ant-card-meta {
-      .ant-card-meta-detail {
-        .ant-card-meta-title {
-          color: white;
-        }
-      }
-    }
-  }
-
   .ant-card-body {
     background-color: #f0f2f5;
 
@@ -31,30 +15,48 @@
         }
       }
 
-      .ant-card-meta-title {
+      .feature-card__title,
+      .feature-card__description {
         color: @primary-text-color;
         font-weight: bold;
-        text-align: center;
         text-overflow: unset;
         white-space: pre-wrap !important;
+      }
+
+      .feature-card__description {
+        color: @secondary-text-color;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &.feature-card--primary {
+    .ant-card-body {
+      background-color: @primary-color;
+    }
+
+    .ant-card-meta {
+      .feature-card__title,
+      .feature-card__description {
+        color: white;
       }
     }
   }
 }
 
-@media only screen and (min-width: 320px) {
-}
-
 @media only screen and (min-width: 575px) {
   .feature-card {
-    &.feature-card--default {
+    &.feature-card--primary {
       .ant-card-body {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
     }
 
     .ant-card-body {
+      padding-top: 15px;
+      padding-bottom: 15px;
+
       .ant-card-meta {
         .ant-card-meta-avatar {
           .ant-avatar {
@@ -63,9 +65,8 @@
           }
         }
 
-        .ant-card-meta-title {
+        .feature-card__title {
           font-size: 1.5rem;
-          white-space: pre-wrap !important;
         }
       }
     }
