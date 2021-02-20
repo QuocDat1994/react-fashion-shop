@@ -7,6 +7,7 @@ import { Cart } from "../Cart/Cart";
 import { Category } from "../Category/Category";
 import { Product } from "../Product/Product";
 import { Checkout } from "../Checkout/Checkout";
+import { Contact } from "../Contact/Contact";
 
 import "./AppContent.less";
 
@@ -30,6 +31,9 @@ export const AppContent = () => {
         </Route>
         <Route path="/checkout">
           <Checkout />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
       </Switch>
     </Content>

@@ -11,7 +11,7 @@ export const FooterMenu = () => {
       title: "Sorry!",
       content: (
         <div>
-          <p>Not available at the moment! ( ^_^')</p>
+          <p>Only Contact Page is available at the moment! ( ^_^')</p>
         </div>
       ),
       centered: true,
@@ -42,9 +42,7 @@ export const FooterMenu = () => {
           </Link>
         </Menu.Item>
         <Menu.Item key="contact" icon={<RightOutlined />}>
-          <Link to="#" onClick={showModal}>
-            Contact
-          </Link>
+          <Link to="/contact">Contact</Link>
         </Menu.Item>
       </Menu>
     </div>

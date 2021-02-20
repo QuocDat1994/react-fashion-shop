@@ -5,11 +5,17 @@ import { getDisplayBillValue, getTotalBill } from "../../utils/index";
 import { IBasicProps } from "../../interfaces/IBasicProps";
 
 import "./CartBox.less";
+import TextArea from "antd/lib/input/TextArea";
 
 interface IProps extends IBasicProps {}
 
 interface IInputProps extends IBasicProps {
   placeholder?: string;
+}
+
+interface ITextAreaProps extends IBasicProps {
+  placeholder?: string;
+  autoSize?: boolean | object;
 }
 
 interface IHeadingProps extends IBasicProps {
@@ -33,9 +39,9 @@ interface IBillProps extends IBasicProps {
 }
 
 export const CartBox = (props: IProps) => {
-  const { children } = props;
+  const { className = "", children } = props;
 
-  return <div className="cart-box">{children}</div>;
+  return <div className={`cart-box ${className}`}>{children}</div>;
 };
 
 export const CartBoxHeading = (props: IHeadingProps) => {
@@ -95,9 +101,26 @@ export const CartBoxBill = (props: IBillProps) => {
 };
 
 export const CartBoxInput = (props: IInputProps) => {
-  const { placeholder = "" } = props;
+  const { className = "", placeholder = "" } = props;
 
   return (
-    <Input size="large" className="cart-box__input" placeholder={placeholder} />
+    <Input
+      size="large"
+      className={`cart-box__input ${className}`}
+      placeholder={placeholder}
+    />
+  );
+};
+
+export const CartBoxTextArea = (props: ITextAreaProps) => {
+  const { className = "", placeholder = "", autoSize = false } = props;
+
+  return (
+    <TextArea
+      size="large"
+      className={`cart-box__textarea ${className}`}
+      placeholder={placeholder}
+      autoSize={autoSize}
+    />
   );
 };
