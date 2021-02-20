@@ -56,7 +56,11 @@ export const CartBoxRadioGroup = (props: IRadioGroupProps) => {
   return (
     <Radio.Group className="cart-box-radio-group">
       {radios.map((radio) => (
-        <Radio value={radio.label + radio.value} className="cart-box-radio">
+        <Radio
+          key={radio.label + radio.value}
+          value={radio.label + radio.value}
+          className="cart-box-radio"
+        >
           <span className="cart-box-radio__label">{radio.label}</span>
           <span className="cart-box-radio__value">
             {getDisplayBillValue(radio.value)}
@@ -73,7 +77,7 @@ export const CartBoxBill = (props: IBillProps) => {
   return (
     <>
       {bills.map((bill) => (
-        <div className="cart-box__bill">
+        <div key={bill.label + bill.value} className="cart-box__bill">
           <span className="cart-box-bill__label">{bill.label}</span>
           <span className="cart-box-bill__value">
             {getDisplayBillValue(bill.value)}

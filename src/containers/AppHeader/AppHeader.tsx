@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col, Layout, Affix, Button } from "antd";
-import {
-  UserOutlined,
-  ShoppingCartOutlined,
-  MenuOutlined,
-} from "@ant-design/icons";
+import { ShoppingCartOutlined, MenuOutlined } from "@ant-design/icons";
 
 import { Logo } from "../../components/Logo/Logo";
 import { HeaderMenu } from "../../components/HeaderMenu/HeaderMenu";
@@ -14,6 +10,8 @@ import { HeaderContact } from "../../components/HeaderContact/HeaderContact";
 import { SocialMedia } from "../../components/SocialMedia/SocialMedia";
 
 import "./AppHeader.less";
+import { HeaderUser } from "../../components/HeaderUser/HeaderUser";
+import { Link } from "react-router-dom";
 
 export const AppHeader = () => {
   const { Header } = Layout;
@@ -61,23 +59,17 @@ export const AppHeader = () => {
 
           {/* Icon */}
           <Col xs={2} sm={2} md={2} lg={1} xl={1} xxl={1}>
-            <Row justify="center">
-              <Button
-                className="app-header__btn"
-                type="text"
-                icon={<UserOutlined />}
-                onClick={showDrawer}
-              />
-            </Row>
+            <HeaderUser />
           </Col>
           <Col xs={2} sm={2} md={2} lg={1} xl={1} xxl={1}>
             <Row justify="center">
-              <Button
-                className="app-header__btn"
-                type="text"
-                icon={<ShoppingCartOutlined />}
-                onClick={showDrawer}
-              />
+              <Link to="/cart" className="app-header_btn-wrapper">
+                <Button
+                  className="app-header__btn"
+                  type="text"
+                  icon={<ShoppingCartOutlined />}
+                />
+              </Link>
             </Row>
           </Col>
           <Col xs={0} sm={0} md={0} lg={0} xl={0} xxl={3}>
