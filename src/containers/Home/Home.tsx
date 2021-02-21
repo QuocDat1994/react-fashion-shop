@@ -1,25 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container } from "../../components/Container/Container";
 import { HomeCarousel } from "../../components/HomeCarousel/HomeCarousel";
 import { HomeCollections } from "../../components/HomeCollections/HomeCollections";
 import { HomeFeatures } from "../../components/HomeFeatures/HomeFeatures";
 import { PageHeading } from "../../components/PageHeading/PageHeading";
 import { ProductList } from "../../components/ProductList/ProductList";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+import { fetchFeaturedProducts } from "../../store/slices/productsSlice";
 
 import "./Home.less";
 
 export const Home = () => {
+  const productList = useAppSelector((state) => state.products.productList);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFeaturedProducts(null));
+  }, [dispatch]);
+
   return (
     <section className="home">
       <HomeCarousel />
       <Container className="home__heading-container">
         <PageHeading
           title="Popular on Fashion Shop"
-          menu={["Women", "Men", "Kids", "Home Deco"]}
+          menu={["Clothes", "Bag", "Shoe"]}
         />
       </Container>
       <Container>
-        <ProductList />
+        <ProductList productList={productList} />
       </Container>
       <Container fluid>
         <HomeCollections />

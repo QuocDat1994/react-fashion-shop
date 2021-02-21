@@ -23,7 +23,7 @@ export const AppContent = () => {
         <Route path="/cart">
           <Cart />
         </Route>
-        <Route path="/category">
+        <Route path="/category/:category">
           <Category />
         </Route>
         <Route path="/product">

@@ -49,7 +49,7 @@ export const Contact = () => {
 
   return (
     <section className="contact">
-      <PageHeading type="section" title="Contact Us" menu={[""]} />
+      <PageHeading type="section" title="Contact Us" menu={[]} />
       <Container>
         <Row gutter={[24, 24]} justify="center">
           <Col md={12} xl={10}>

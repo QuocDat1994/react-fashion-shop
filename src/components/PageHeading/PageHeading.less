@@ -12,8 +12,12 @@
     font-weight: bold;
     text-align: center;
 
-    span {
+    span,
+    span a {
       color: @primary-text-color;
+    }
+
+    span a {
       transition: 0.3s all ease-in-out;
       cursor: pointer;
 
@@ -35,15 +39,10 @@
       font-weight: normal;
       font-size: 1rem;
 
-      span {
+      span,
+      span a {
         color: rgba(255, 255, 255, 0.8);
       }
     }
   }
-}
-
-@media only screen and (min-width: 320px) {
-}
-
-@media only screen and (min-width: 575px) {
 }

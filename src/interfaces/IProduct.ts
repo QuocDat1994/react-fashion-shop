@@ -6,8 +6,8 @@ export interface IProduct {
   name: string;
   category: string;
   rating: number;
-  review: number;
   price: number;
-  size: Size[];
+  reviews: number;
+  sizes: Size[];
   desc: string;
 }

@@ -84,8 +84,8 @@ export const LoginPage = (props: IProps) => {
               </Button>
             </Item>
             <p className="form__tips">
-              * Hello there! This is just a dummy login form. Therefore, you can
-              input anything to login :
+              * Hello there! This is just a dummy login form. You can input
+              anything to login :
               <span dangerouslySetInnerHTML={{ __html: ")" }} />
             </p>
           </Form>

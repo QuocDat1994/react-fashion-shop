@@ -20,9 +20,9 @@ export const HomeCarousel = () => {
     name: "Cool Clothing with Brown Stripes",
     category: "Woman",
     rating: 4.5,
-    review: 412,
+    reviews: 412,
     price: 3.99,
-    size: ["S", "M", "L", "XL"],
+    sizes: ["S", "M", "L", "XL"],
     desc: "dasasa",
   };
 

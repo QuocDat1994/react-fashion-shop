@@ -24,3 +24,7 @@ export const getClassName = (baseClass: string, modifier: string) => {
   }
   return "";
 };
+
+export const capitalize = (text: string) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+};

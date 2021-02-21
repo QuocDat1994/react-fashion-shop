@@ -19,11 +19,14 @@ export const HeaderMenu = (props: IProps) => {
         <Menu.Item key="home">
           <Link to="/">Home</Link>
         </Menu.Item>
-        <Menu.Item key="cart">
-          <Link to="/cart">Cart</Link>
+        <Menu.Item key="clothes">
+          <Link to="/category/clothes">Clothes</Link>
         </Menu.Item>
-        <Menu.Item key="category">
-          <Link to="/category">Category</Link>
+        <Menu.Item key="bag">
+          <Link to="/category/bag">Bag</Link>
+        </Menu.Item>
+        <Menu.Item key="shoe">
+          <Link to="/category/shoe">Shoe</Link>
         </Menu.Item>
         <Menu.Item key="product">
           <Link to="/product">Product</Link>
