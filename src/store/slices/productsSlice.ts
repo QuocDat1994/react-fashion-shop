@@ -1,7 +1,10 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { service } from "../../api/services";
 import { IProduct } from "../../interfaces/IProduct";
 import { ICarouselItem } from "../../interfaces/ICarouselItem";
+import { IRequestParam } from "../../interfaces/IRequestParam";
+
 import {
   PRODUCTS_SLICE,
   FETCH_PRODUCT_BY_ID,
@@ -42,10 +45,13 @@ export const fetchProductById = createAsyncThunk<IProduct, string>(
   }
 );
 
-export const fetchProductsByCategory = createAsyncThunk<IProduct[], string>(
+export const fetchProductsByCategory = createAsyncThunk<
+  IProduct[],
+  IRequestParam
+>(
   `${PRODUCTS_SLICE}/${FETCH_PRODUCT_BY_CATEGORY}`,
-  async (category: string) => {
-    const response = service.fetchProductsByCategory(category);
+  async (param: IRequestParam) => {
+    const response = service.fetchProductsByCategory(param);
     return response as IProduct[];
   }
 );
@@ -70,7 +76,10 @@ export const productsSlice = createSlice({
   name: PRODUCTS_SLICE,
   initialState,
   reducers: {
-    incrementByAmount: () => {},
+    filterProductList: (state, action: PayloadAction<string>) => {
+      const filter = action.payload;
+    },
+    sortProductList: (state, action: PayloadAction<string>) => {},
   },
   extraReducers: (builder) => {
     builder.addCase(fetchProductsByCategory.fulfilled, (state, action) => {
@@ -88,6 +97,6 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { incrementByAmount } = productsSlice.actions;
+export const { filterProductList, sortProductList } = productsSlice.actions;
 
 export default productsSlice.reducer;

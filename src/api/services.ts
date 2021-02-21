@@ -2,6 +2,9 @@ import { products } from "./dummyData/products";
 import { featuredProducts } from "./dummyData/featuredProducts";
 import { carouselItems } from "./dummyData/carouselItems";
 
+import { IRequestParam } from "../interfaces/IRequestParam";
+import { IProduct } from "../interfaces/IProduct";
+
 const fetchProductById = (id: string) => {
   const product = products.find((product) => product.id === id);
 
@@ -12,10 +15,18 @@ const fetchProductById = (id: string) => {
   return product;
 };
 
-const fetchProductsByCategory = (category: string) => {
-  return products.filter(
+const fetchProductsByCategory = (param: IRequestParam) => {
+  const { category, filterBy = "", sortBy = "" } = param;
+
+  let productList = products.filter(
     (product) => product.category.toLowerCase() === category.toLowerCase()
   );
+
+  if (Boolean(filterBy)) {
+    productList = filterProductList(filterBy, productList);
+  }
+
+  return productList;
 };
 
 const fetchFeaturedProducts = () => {
@@ -27,6 +38,19 @@ const fetchCarouselItems = () => {
     const productList = item.products.map((id) => fetchProductById(id));
     return { ...item, products: productList };
   });
+};
+
+const filterProductList = (filterBy: string, productList: any): any => {
+  switch (filterBy) {
+    case "hot":
+      return productList.filter((product: any) => product.reviews >= 50);
+    case "rating":
+      return productList.filter((product: any) => product.rating >= 4);
+    case "deal":
+      return productList.filter((product: any) => product.price < 10);
+    default:
+      return productList;
+  }
 };
 
 export const service = {
