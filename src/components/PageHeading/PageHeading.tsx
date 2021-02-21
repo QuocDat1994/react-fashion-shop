@@ -15,10 +15,9 @@ interface IProps extends IBasicProps {
 }
 
 export const PageHeading = (props: IProps) => {
-  const location = useLocation();
-  console.log("location :", location);
   const { Title } = Typography;
   const { title, menu, type } = props;
+  const location = useLocation();
 
   return (
     <div

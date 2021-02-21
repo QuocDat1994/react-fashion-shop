@@ -4,6 +4,7 @@ import { RightOutlined } from "@ant-design/icons";
 
 import "./HomeCollections.less";
 import { BlurBackground } from "../BlurBackground/BlurBackground";
+import { Link } from "react-router-dom";
 
 export const HomeCollections = () => {
   const CollectionCard = (props: { image: string; title: string }) => {
@@ -33,22 +34,28 @@ export const HomeCollections = () => {
   return (
     <Row className="home-collections" gutter={[24, 24]} justify="center">
       <Col xs={24} md={12} xl={8}>
-        <CollectionCard
-          image="https://preview.colorlib.com/theme/littlecloset/images/box_1_img.jpg"
-          title="Fashion Trends"
-        />
+        <Link to="/category/clothes">
+          <CollectionCard
+            image="https://preview.colorlib.com/theme/littlecloset/images/box_1_img.jpg"
+            title="Fashion Trends"
+          />
+        </Link>
       </Col>
       <Col xs={24} md={12} xl={8}>
-        <CollectionCard
-          image="https://preview.colorlib.com/theme/littlecloset/images/box_2_img.jpg"
-          title="Popular Choice"
-        />
+        <Link to="/category/bag">
+          <CollectionCard
+            image="https://preview.colorlib.com/theme/littlecloset/images/box_2_img.jpg"
+            title="Popular Choice"
+          />
+        </Link>
       </Col>
       <Col xs={24} md={12} xl={8}>
-        <CollectionCard
-          image="https://preview.colorlib.com/theme/littlecloset/images/box_3_img.jpg"
-          title="Winter Collection"
-        />
+        <Link to="/category/shoe">
+          <CollectionCard
+            image="https://preview.colorlib.com/theme/littlecloset/images/box_3_img.jpg"
+            title="Winter Collection"
+          />
+        </Link>
       </Col>
     </Row>
   );

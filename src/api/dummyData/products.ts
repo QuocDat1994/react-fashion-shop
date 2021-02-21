@@ -234,4 +234,16 @@ export const products = [
     desc:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi qui ullam perspiciatis repudiandae cumque a at eaque eum, voluptatem ut culpa. Accusamus libero doloremque animi vero velit alias nihil eum?",
   },
+  {
+    id: "19",
+    image: "https://preview.colorlib.com/theme/littlecloset/images/home_2.jpg",
+    name: "Clothing with Brown Stripes",
+    category: "Clothes",
+    rating: 3,
+    price: 12,
+    reviews: 232,
+    sizes: ["S", "M", "L"],
+    desc:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi qui ullam perspiciatis repudiandae cumque a at eaque eum, voluptatem ut culpa. Accusamus libero doloremque animi vero velit alias nihil eum?",
+  },
 ];

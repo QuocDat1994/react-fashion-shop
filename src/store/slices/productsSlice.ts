@@ -1,15 +1,18 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { service } from "../../api/services";
 import { IProduct } from "../../interfaces/IProduct";
+import { ICarouselItem } from "../../interfaces/ICarouselItem";
 
 interface IProductsState {
   value: number;
   productList: IProduct[];
+  carouselItems: ICarouselItem[];
 }
 
 const initialState: IProductsState = {
   value: 0,
   productList: [],
+  carouselItems: [],
 };
 
 export const fetchProductsByCategory = createAsyncThunk<IProduct[], string>(
@@ -28,6 +31,14 @@ export const fetchFeaturedProducts = createAsyncThunk<IProduct[], null>(
   }
 );
 
+export const fetchCarouselItems = createAsyncThunk<ICarouselItem[], null>(
+  "products/fetchCarouselItems",
+  async () => {
+    const response = service.fetchCarouselItems();
+    return response as ICarouselItem[];
+  }
+);
+
 export const productsSlice = createSlice({
   name: "products",
   initialState,
@@ -40,6 +51,9 @@ export const productsSlice = createSlice({
     });
     builder.addCase(fetchFeaturedProducts.fulfilled, (state, action) => {
       state.productList = action.payload;
+    });
+    builder.addCase(fetchCarouselItems.fulfilled, (state, action) => {
+      state.carouselItems = action.payload;
     });
   },
 });

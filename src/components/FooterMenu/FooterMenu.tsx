@@ -11,7 +11,7 @@ export const FooterMenu = () => {
       title: "Sorry!",
       content: (
         <div>
-          <p>Only Contact Page is available at the moment! ( ^_^')</p>
+          <p>Only Contact page is available at the moment! ( ^_^')</p>
         </div>
       ),
       centered: true,
