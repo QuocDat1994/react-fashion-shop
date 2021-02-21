@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Col, Row, Image, Space } from "antd";
+import { Col, Row, Image, Space, Modal } from "antd";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 
 import { useParams } from "react-router-dom";
@@ -39,7 +39,17 @@ export const Product = () => {
     dispatch(fetchProductById(id));
   }, [id, dispatch]);
 
-  const handleClick = () => {};
+  const showModal = () => {
+    Modal.info({
+      title: "Sorry!",
+      content: (
+        <div>
+          <p>This function is not available at the moment... : (</p>
+        </div>
+      ),
+      centered: true,
+    });
+  };
 
   return (
     <section className="product">
@@ -72,16 +82,16 @@ export const Product = () => {
                 <p className="product__description">{desc}</p>
 
                 <Row className="product__btn-group">
-                  <Col className="product__btn" span={12}>
+                  <Col className="product__btn" span={12} onClick={showModal}>
                     <ProductButton
                       icon={<HeartOutlined />}
-                      onClick={handleClick}
+                      onClick={() => {}}
                     />
                   </Col>
-                  <Col className="product__btn" span={12}>
+                  <Col className="product__btn" span={12} onClick={showModal}>
                     <ProductButton
                       icon={<ShoppingCartOutlined />}
-                      onClick={handleClick}
+                      onClick={() => {}}
                     />
                   </Col>
                 </Row>

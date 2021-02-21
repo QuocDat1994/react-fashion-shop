@@ -1,5 +1,5 @@
 import React from "react";
-import { Checkbox, Col, Row, Space } from "antd";
+import { Checkbox, Col, Modal, Row, Space } from "antd";
 
 import { AppButton } from "../../components/AppButton/AppButton";
 import { Container } from "../../components/Container/Container";
@@ -16,6 +16,18 @@ import {
 import "./Checkout.less";
 
 export const Checkout = () => {
+  const showModal = () => {
+    Modal.info({
+      title: "Sorry!",
+      content: (
+        <div>
+          <p>This function is not available at the moment... : (</p>
+        </div>
+      ),
+      centered: true,
+    });
+  };
+
   return (
     <section className="checkout">
       <PageHeading
@@ -101,7 +113,7 @@ export const Checkout = () => {
                 officia reiciendis incidunt.
               </CartBoxDescription>
               <AppButton type="primary" size="large" fluid>
-                PLACE ORDER
+                <div onClick={showModal}> PLACE ORDER</div>
               </AppButton>
             </CartBox>
           </Col>

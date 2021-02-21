@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Radio, Row, Space } from "antd";
+import { Col, Modal, Radio, Row, Space } from "antd";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
 import { PageHeading } from "../../components/PageHeading/PageHeading";
@@ -47,6 +47,18 @@ export const Contact = () => {
     }
   };
 
+  const showModal = () => {
+    Modal.info({
+      title: "Sorry!",
+      content: (
+        <div>
+          <p>This function is not available at the moment... : (</p>
+        </div>
+      ),
+      centered: true,
+    });
+  };
+
   return (
     <section className="contact">
       <PageHeading type="section" title="Contact Us" menu={[]} />
@@ -72,7 +84,7 @@ export const Contact = () => {
                 autoSize={{ minRows: 6, maxRows: 10 }}
               />
               <AppButton type="primary" size="large" fluid>
-                SEND MESSAGE
+                <div onClick={showModal}> SEND MESSAGE</div>
               </AppButton>
             </CartBox>
           </Col>

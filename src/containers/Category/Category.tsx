@@ -35,7 +35,7 @@ export const Category = () => {
       <PageHeading type="section" title="Category Page" menu={[category]} />
       <Container className="category__controls">
         <CategoryFilter setFilter={setFilter} />
-        {/* <CategorySorting setSorter={setSorter} /> */}
+        <CategorySorting setSorter={setSorter} />
       </Container>
 
       <Container>

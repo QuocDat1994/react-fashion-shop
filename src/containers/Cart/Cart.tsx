@@ -1,4 +1,4 @@
-import { Card, Col, InputNumber, Row, Space, Table } from "antd";
+import { Card, Col, InputNumber, Modal, Row, Space, Table } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import { AppButton } from "../../components/AppButton/AppButton";
@@ -34,6 +34,18 @@ export const Cart = () => {
   ];
 
   const handleOnChange = () => {};
+
+  const showModal = () => {
+    Modal.info({
+      title: "Sorry!",
+      content: (
+        <div>
+          <p>This function is not available at the moment... : (</p>
+        </div>
+      ),
+      centered: true,
+    });
+  };
 
   return (
     <section className="cart">
@@ -101,10 +113,14 @@ export const Cart = () => {
             />
           </Table>
           <Space className="cart__btn-group" size="middle">
-            <AppButton size="large">Clear Cart</AppButton>
-            <AppButton type="primary" size="large">
-              Continue Shopping
+            <AppButton size="large">
+              <div onClick={showModal}>Clear Cart</div>
             </AppButton>
+            <Link to="/">
+              <AppButton type="primary" size="large">
+                Continue Shopping
+              </AppButton>
+            </Link>
           </Space>
         </Space>
       </Container>
@@ -116,7 +132,7 @@ export const Cart = () => {
               <Space>
                 <CartBoxInput />
                 <AppButton type="primary" size="large">
-                  Apply
+                  <div onClick={showModal}>Apply</div>
                 </AppButton>
               </Space>
               <CartBoxDescription>

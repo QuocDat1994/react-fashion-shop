@@ -16,7 +16,7 @@ export const ProductRating = (props: IProps) => {
       className={`product-rating ${className}`}
       disabled
       allowHalf
-      defaultValue={rating}
+      value={rating}
     />
   );
 };

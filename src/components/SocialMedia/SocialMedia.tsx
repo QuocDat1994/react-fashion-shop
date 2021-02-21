@@ -20,26 +20,34 @@ export const SocialMedia = (props: IProps) => {
   return (
     <Row align="middle" className={`social-media ${className}`}>
       <Space size="middle">
-        <Button
-          className="social-media__btn"
-          shape="circle"
-          icon={<FacebookFilled />}
-        />
-        <Button
-          className="social-media__btn"
-          shape="circle"
-          icon={<YoutubeFilled />}
-        />
-        <Button
-          className="social-media__btn"
-          shape="circle"
-          icon={<TwitterCircleFilled />}
-        />
-        <Button
-          className="social-media__btn"
-          shape="circle"
-          icon={<InstagramFilled />}
-        />
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <Button
+            className="social-media__btn"
+            shape="circle"
+            icon={<FacebookFilled />}
+          />
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+          <Button
+            className="social-media__btn"
+            shape="circle"
+            icon={<YoutubeFilled />}
+          />
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+          <Button
+            className="social-media__btn"
+            shape="circle"
+            icon={<TwitterCircleFilled />}
+          />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <Button
+            className="social-media__btn"
+            shape="circle"
+            icon={<InstagramFilled />}
+          />
+        </a>
       </Space>
     </Row>
   );

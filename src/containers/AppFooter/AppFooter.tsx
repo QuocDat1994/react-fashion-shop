@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Input, Layout, Row, Space } from "antd";
+import { Button, Col, Input, Layout, Modal, Row, Space } from "antd";
 
 import { Logo } from "../../components/Logo/Logo";
 import { SocialMedia } from "../../components/SocialMedia/SocialMedia";
@@ -10,6 +10,18 @@ import { PlusOutlined } from "@ant-design/icons";
 
 export const AppFooter = () => {
   const { Footer } = Layout;
+
+  const showModal = () => {
+    Modal.info({
+      title: "Sorry!",
+      content: (
+        <div>
+          <p>This function is not available at the moment... : (</p>
+        </div>
+      ),
+      centered: true,
+    });
+  };
 
   return (
     <Footer className="app-footer">
@@ -43,7 +55,13 @@ export const AppFooter = () => {
                 className="app-footer__subscribe"
                 size="large"
                 placeholder="Subcribe to our latest news"
-                suffix={<Button shape="circle" icon={<PlusOutlined />} />}
+                suffix={
+                  <Button
+                    shape="circle"
+                    icon={<PlusOutlined />}
+                    onClick={showModal}
+                  />
+                }
               />
             </Row>
             <Row>

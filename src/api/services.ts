@@ -1,9 +1,10 @@
+import { orderBy } from "lodash";
+
 import { products } from "./dummyData/products";
 import { featuredProducts } from "./dummyData/featuredProducts";
 import { carouselItems } from "./dummyData/carouselItems";
 
 import { IRequestParam } from "../interfaces/IRequestParam";
-import { IProduct } from "../interfaces/IProduct";
 
 const fetchProductById = (id: string) => {
   const product = products.find((product) => product.id === id);
@@ -24,6 +25,10 @@ const fetchProductsByCategory = (param: IRequestParam) => {
 
   if (Boolean(filterBy)) {
     productList = filterProductList(filterBy, productList);
+  }
+
+  if (Boolean(sortBy)) {
+    productList = sortProductList(sortBy, productList);
   }
 
   return productList;
@@ -48,6 +53,17 @@ const filterProductList = (filterBy: string, productList: any): any => {
       return productList.filter((product: any) => product.rating >= 4);
     case "deal":
       return productList.filter((product: any) => product.price < 10);
+    default:
+      return productList;
+  }
+};
+
+const sortProductList = (sortBy: string, productList: any): any => {
+  switch (sortBy) {
+    case "name":
+      return orderBy(productList, ["name"], ["asc"]);
+    case "price":
+      return orderBy(productList, ["price"], ["asc"]);
     default:
       return productList;
   }
