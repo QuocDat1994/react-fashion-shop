@@ -33,4 +33,5 @@ export const service = {
   fetchProductsByCategory: fetchProductsByCategory,
   fetchFeaturedProducts: fetchFeaturedProducts,
   fetchCarouselItems: fetchCarouselItems,
+  fetchProductById: fetchProductById,
 };

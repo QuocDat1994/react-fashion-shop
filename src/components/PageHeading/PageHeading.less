@@ -13,11 +13,13 @@
     text-align: center;
 
     span,
-    span a {
+    span a,
+    span:last-child a {
       color: @primary-text-color;
     }
 
-    span a {
+    span a,
+    span:last-child a {
       transition: 0.3s all ease-in-out;
       cursor: pointer;
 
@@ -40,7 +42,8 @@
       font-size: 1rem;
 
       span,
-      span a {
+      span a,
+      span:last-child a {
         color: rgba(255, 255, 255, 0.8);
       }
     }

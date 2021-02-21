@@ -1,33 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Carousel, Col, Row, Typography } from "antd";
-
-import "./HomeCarousel.less";
-import { ProductCard } from "../ProductCard/ProductCard";
-import { IProduct } from "../../interfaces/IProduct";
-import { BlurBackground } from "../BlurBackground/BlurBackground";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+
+import { ProductCard } from "../ProductCard/ProductCard";
+import { BlurBackground } from "../BlurBackground/BlurBackground";
+
 import { IBasicProps } from "../../interfaces/IBasicProps";
 import { ICarouselItem } from "../../interfaces/ICarouselItem";
 
+import "./HomeCarousel.less";
 interface ICarouselProps extends IBasicProps {
   carouselItems: ICarouselItem[];
 }
 
 export const HomeCarousel = (props: ICarouselProps) => {
   const { carouselItems } = props;
-
-  const product: IProduct = {
-    id: (Math.random() * 100).toString(),
-    image:
-      "https://preview.colorlib.com/theme/littlecloset/images/product_7.jpg",
-    name: "Cool Clothing with Brown Stripes",
-    category: "Woman",
-    rating: 4.5,
-    reviews: 412,
-    price: 3.99,
-    sizes: ["S", "M", "L", "XL"],
-    desc: "dasasa",
-  };
 
   const carousel: any = React.useRef(null);
 
@@ -68,13 +56,17 @@ export const HomeCarousel = (props: ICarouselProps) => {
         </Row>
         <Row align="middle" gutter={24} justify="center">
           <Col xs={0} sm={0} md={6} lg={5}>
-            <img className="item-image" src={products[0].image} alt="" />
+            <Link to={`/product/${products[0].id}`}>
+              <img className="item-image" src={products[0].image} alt="" />
+            </Link>
           </Col>
           <Col xs={20} sm={12} md={8} lg={8} xl={6}>
             <ProductCard product={products[1]} />
           </Col>
           <Col xs={0} sm={0} md={6} lg={5}>
-            <img className="item-image" src={products[2].image} alt="" />
+            <Link to={`/product/${products[2].id}`}>
+              <img className="item-image" src={products[2].image} alt="" />
+            </Link>
           </Col>
         </Row>
       </div>
@@ -90,7 +82,7 @@ export const HomeCarousel = (props: ICarouselProps) => {
       }}
     >
       {carouselItems.map((item) => (
-        <CarouselItem item={item} />
+        <CarouselItem key={item.heading} item={item} />
       ))}
     </Carousel>
   );

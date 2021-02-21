@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Row, Image, Space } from "antd";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+
+import { useParams } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from "../../store/hooks";
+
+import { fetchProductById } from "../../store/slices/productsSlice";
 
 import { Container } from "../../components/Container/Container";
 import { PageHeading } from "../../components/PageHeading/PageHeading";
@@ -14,49 +19,57 @@ import { FeatureCard } from "../../components/FeatureCard/FeatureCard";
 import "./Product.less";
 
 export const Product = () => {
+  let { id } = useParams<{ id: string }>();
+
+  const product = useAppSelector((state) => state.products.product);
+  const dispatch = useAppDispatch();
+
+  const {
+    category,
+    name,
+    image,
+    rating,
+    reviews,
+    price,
+    sizes,
+    desc,
+  } = product;
+
+  useEffect(() => {
+    dispatch(fetchProductById(id));
+  }, [id, dispatch]);
+
   const handleClick = () => {};
 
   return (
     <section className="product">
-      <PageHeading
-        type="section"
-        title="Product Page"
-        menu={["Home", "Woman", "New Products"]}
-      />
+      <PageHeading type="section" title="Product Page" menu={[category]} />
       <Container>
         <Space direction="vertical" size="large">
           <Row justify="center" gutter={[24, 24]}>
             <Col xs={24} md={12} lg={9}>
-              <Image src="https://preview.colorlib.com/theme/littlecloset/images/product_image_1.jpg" />
+              <Image src={image} />
             </Col>
             <Col xs={24} md={12} lg={9}>
               <Space direction="vertical" size="large">
-                <ProductName
-                  name="Clothing with Brown Stripes"
-                  category={"Woman"}
-                />
+                <ProductName name={name} category={category} />
 
                 <Space size="large">
-                  <ProductRating className="product__rating" rating={3} />
+                  <ProductRating className="product__rating" rating={rating} />
                   <div className="product__review">
-                    4.7 out of (3514) Reviews
+                    {rating} out of ({reviews}) Reviews
                   </div>
                 </Space>
 
                 <ProductPrice
                   className="product__price"
-                  price={12}
+                  price={price}
                   size="large"
                 />
 
-                <ProductSize sizes={["S", "M", "L"]} />
+                <ProductSize sizes={sizes} />
 
-                <p className="product__description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Excepturi qui ullam perspiciatis repudiandae cumque a at eaque
-                  eum, voluptatem ut culpa. Accusamus libero doloremque animi
-                  vero velit alias nihil eum?
-                </p>
+                <p className="product__description">{desc}</p>
 
                 <Row className="product__btn-group">
                   <Col className="product__btn" span={12}>

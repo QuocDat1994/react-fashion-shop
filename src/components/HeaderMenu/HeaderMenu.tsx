@@ -28,9 +28,6 @@ export const HeaderMenu = (props: IProps) => {
         <Menu.Item key="shoe">
           <Link to="/category/shoe">Shoe</Link>
         </Menu.Item>
-        <Menu.Item key="product">
-          <Link to="/product">Product</Link>
-        </Menu.Item>
       </Menu>
     </div>
   );

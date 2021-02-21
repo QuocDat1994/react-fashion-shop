@@ -26,22 +26,25 @@ export const PageHeading = (props: IProps) => {
       }`}
     >
       <Title className="page-heading__title">{title}</Title>
-      <Breadcrumb className="page-heading__breadcrumb">
-        {location.pathname !== "/" && (
-          <Breadcrumb.Item key={"home"}>
-            <Link to="/">Home</Link>
-          </Breadcrumb.Item>
-        )}
-        {menu.map((item) =>
-          location.pathname.includes(item) ? (
-            <Breadcrumb.Item key={item}>{capitalize(item)}</Breadcrumb.Item>
-          ) : (
-            <Breadcrumb.Item key={item}>
-              <Link to={`/category/${item}`}>{capitalize(item)}</Link>
+
+      {Boolean(menu.length) && (
+        <Breadcrumb className="page-heading__breadcrumb">
+          {location.pathname !== "/" && (
+            <Breadcrumb.Item key={"home"}>
+              <Link to="/">Home</Link>
             </Breadcrumb.Item>
-          )
-        )}
-      </Breadcrumb>
+          )}
+          {menu.map((item) =>
+            location.pathname.includes(item) ? (
+              <Breadcrumb.Item key={item}>{capitalize(item)}</Breadcrumb.Item>
+            ) : (
+              <Breadcrumb.Item key={item}>
+                <Link to={`/category/${item}`}>{capitalize(item)}</Link>
+              </Breadcrumb.Item>
+            )
+          )}
+        </Breadcrumb>
+      )}
     </div>
   );
 };

@@ -6,7 +6,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 8.99,
     reviews: 232,
     sizes: ["S", "M", "L"],
     desc:
@@ -19,7 +19,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 15.5,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -32,7 +32,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 9.5,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -45,7 +45,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 7,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -58,7 +58,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 6.69,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -84,7 +84,7 @@ export const products = [
     name: "Rainbow Infill Montana Rucksack",
     category: "Bag",
     rating: 3,
-    price: 12,
+    price: 15.45,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -97,7 +97,7 @@ export const products = [
     name: "Rainbow Infill Montana Rucksack",
     category: "Bag",
     rating: 3,
-    price: 12,
+    price: 18,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -111,7 +111,7 @@ export const products = [
     name: "Rainbow Infill Montana Rucksack",
     category: "Bag",
     rating: 3,
-    price: 12,
+    price: 19.99,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -124,7 +124,7 @@ export const products = [
     name: "Rainbow Infill Montana Rucksack",
     category: "Bag",
     rating: 3,
-    price: 12,
+    price: 25.5,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -137,7 +137,7 @@ export const products = [
     name: "London Square Chelsea Boot Black",
     category: "Shoe",
     rating: 3,
-    price: 12,
+    price: 22.9,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -150,7 +150,7 @@ export const products = [
     name: "London Square Chelsea Boot Black",
     category: "Shoe",
     rating: 3,
-    price: 12,
+    price: 29.9,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -163,7 +163,7 @@ export const products = [
     name: "London Square Chelsea Boot Black",
     category: "Shoe",
     rating: 3,
-    price: 12,
+    price: 37.0,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -176,7 +176,7 @@ export const products = [
     name: "London Square Chelsea Boot Black",
     category: "Shoe",
     rating: 3,
-    price: 12,
+    price: 24.5,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -189,7 +189,7 @@ export const products = [
     name: "London Square Chelsea Boot Black",
     category: "Shoe",
     rating: 3,
-    price: 12,
+    price: 17,
     reviews: 321,
     sizes: ["S", "M", "L"],
     desc:
@@ -202,7 +202,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 6.85,
     reviews: 232,
     sizes: ["S", "M", "L"],
     desc:
@@ -228,7 +228,7 @@ export const products = [
     name: "Clothing with Brown Stripes",
     category: "Clothes",
     rating: 3,
-    price: 12,
+    price: 12.0,
     reviews: 232,
     sizes: ["S", "M", "L"],
     desc:

@@ -10,8 +10,12 @@ interface IProps extends IBasicProps {
 }
 
 export const ProductPrice = (props: IProps) => {
-  const { className = "", size = "" } = props;
+  const { className = "", size = "", price } = props;
   const { Text } = Typography;
+
+  const getPriceString = (price: number) => {
+    return price.toString().split(".");
+  };
 
   return (
     <Text
@@ -19,7 +23,12 @@ export const ProductPrice = (props: IProps) => {
       ${getClassName("product-price", size)}`}
       strong
     >
-      $3<span className="product-price__minor">.99</span>
+      ${getPriceString(price)[0]}
+      {getPriceString(price)[1] && (
+        <span className="product-price__minor">
+          .{getPriceString(price)[1]}
+        </span>
+      )}
     </Text>
   );
 };
