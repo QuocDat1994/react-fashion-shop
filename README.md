@@ -7,9 +7,7 @@ React - Antd - Typescript Fashion Shop
 
 This project was built with create-react-app, typescript and redux-toolkit.
 
-I make this project to practice AntD. Therefore, I use Less instead of SASS this time. 
-
-There are some unfinished functions but I think it is quite alright for now.
+There are some unfinished functions but it is quite alright for now :D
 
 Original Design belong to [Colorlib](https://colorlib.com/)
 
