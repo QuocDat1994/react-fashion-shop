@@ -1,6 +1,6 @@
 React - Antd - Typescript Fashion Shop 
 ============
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](http://responsive-cv.quocdat1994.surge.sh/) 
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](http://fashion-shop.quocdat1994.surge.sh/) 
 ![](https://img.shields.io/badge/types-TypeScript-blue)
 ![](https://img.shields.io/badge/antd-AntDesign-blue)
 ![Responsive](https://img.shields.io/badge/responsive-website-green)
